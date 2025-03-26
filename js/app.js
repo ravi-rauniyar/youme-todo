@@ -2,12 +2,17 @@
  * Adds a new task.
  */
 function addTask() {
-    const input = document.getElementById('taskInput');
-    if (input.value.trim() === '') return alert('Task cannot be empty!');
+    const taskInput = document.getElementById('taskNameField');
+    const taskName = taskInput.value.trim();
+    if (!taskName) return alert('Task name cannot be empty!');
+
+    const taskDetailsInput = document.getElementById('taskDetailsField');
+    const taskDetails = taskDetailsInput.value.trim();
+
     const tasks = getTasks();
-    tasks.push(input.value.trim());
+    tasks.push({ name: taskName, details: taskDetails });
     saveTasks(tasks);
-    input.value = '';
+
     window.location.href = 'index.html';
 }
 
