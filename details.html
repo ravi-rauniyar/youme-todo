@@ -7,16 +7,29 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="create.html">Create Task</a>
-        </nav>
-        <div class="container">
-            <h1>View Task</h1>
-            <p id="taskName"></p>
-            <p id="taskDetails"></p>
-            <br />
-            <a href="update.html">Edit Task</a>
+        <div class="hero flex-center">
+            <div class="navbar flex-center">
+                <a href="index.html">
+                    <img src="./assets/logo.png" />
+                </a>
+                <button>
+                    <a href="create.html">Add Task</a>
+                </button>
+            </div>
+            <div class="container flex-center">
+                <div>
+                    <section class="detailsHeader flex-center">
+                        <h1>View Task</h1>
+                        <a href="update.html">
+                            <img src="../assets/update.svg" />
+                        </a>
+                    </section>
+                    <section class="detailsContainer flex-center">
+                        <p id="taskName"></p>
+                        <p id="taskDetails"></p>
+                    </section>
+                </div>
+            </div>
         </div>
 
         <script src="js/app.js"></script>
