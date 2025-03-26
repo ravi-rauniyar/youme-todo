@@ -33,5 +33,5 @@ function updateTask() {
     }
 
     saveTasks(tasks);
-    window.location.href = 'index.html';
+    window.location.href = 'details.html';
 }
