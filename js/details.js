@@ -7,10 +7,21 @@ function viewTask(index) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const taskId = localStorage.getItem('taskId');
     const tasks = getTasks();
-    taskDetail = document.getElementById('taskDetail');
-    if (taskDetail) {
-        taskDetail.textContent = tasks[taskId] || 'Task not found';
+    const taskId = localStorage.getItem('taskId');
+    if (!(taskId || window.location.pathname.endsWith('index.html'))) {
+        window.location.href = 'index.html';
+    }
+    const viewedTask = tasks[taskId];
+    if (viewedTask) {
+        const { name, details } = tasks[taskId];
+        taskName = document.getElementById('taskName');
+        if (taskName) {
+            taskName.textContent = `Name: ${name || 'Task name not found'}`;
+        }
+        taskDetails = document.getElementById('taskDetails');
+        if (taskDetails) {
+            taskDetails.textContent = `Details: ${details || 'Not Available'}`;
+        }
     }
 });
