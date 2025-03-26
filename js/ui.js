@@ -10,8 +10,7 @@ function renderTasks() {
     if (tasks.length)
         tasks.forEach((task, index) => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="details.html" onclick="viewTask(${index})">${task.name}</a>
-                            <button onclick="deleteTask(${index})">Delete</button>`;
+            li.innerHTML = `<a href="details.html" onclick="viewTask(${index})">${task.name}</a><button onclick="deleteTask(${index})"><img src="../assets/delete.svg"/></button>`;
             taskList.appendChild(li);
         });
     else {

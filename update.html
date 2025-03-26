@@ -7,23 +7,35 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="create.html">Create Task</a>
-        </nav>
-        <div class="container">
-            <h1>Update Task</h1>
-            <input
-                type="text"
-                id="updateTaskName"
-                placeholder="Update task name"
-            />
-            <input
-                type="text"
-                id="updateTaskDetails"
-                placeholder="Update task details"
-            />
-            <button onclick="updateTask()">Update Task</button>
+        <div class="navbar flex-center">
+            <a href="index.html">
+                <img src="./assets/logo.png" />
+            </a>
+            <button>
+                <a href="index.html">Home</a>
+            </button>
+        </div>
+        <div class="container flex-center">
+            <div>
+                <h1>Update Task</h1>
+                <section class="formContainer flex-center">
+                    <label>Name:</label>
+                    <input
+                        type="text"
+                        id="updateTaskName"
+                        placeholder="Enter task name"
+                    />
+                    <label>Details:</label>
+                    <textarea
+                        type="text"
+                        id="updateTaskDetails"
+                        placeholder="Enter task details"
+                    ></textarea>
+                    <button id="updateButton" onclick="updateTask()">
+                        Submit
+                    </button>
+                </section>
+            </div>
         </div>
 
         <script src="js/app.js"></script>
